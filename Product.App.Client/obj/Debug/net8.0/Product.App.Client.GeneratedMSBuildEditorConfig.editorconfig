@@ -36,3 +36,11 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/guilf/Desktop/product-app/Product.App.Client/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-g71ep2e0jc
+
+[C:/Users/guilf/Desktop/product-app/Product.App.Client/Pages/Products/EditProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcRWRpdFByb2R1Y3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-1vybqdemns
+
+[C:/Users/guilf/Desktop/product-app/Product.App.Client/Pages/Products/ListProducts.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdHNcTGlzdFByb2R1Y3RzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-5jemh38h61
