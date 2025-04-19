@@ -6,14 +6,18 @@ namespace Product.App.Client.Pages.Products;
 
 public class ListProductsBase : ComponentBase
 {
+    #region services
     [Inject]
     protected IProductService ProductService { get; set; }
 
     [Inject]
     protected NavigationManager NavigationManager { get; set; }
+    #endregion
 
+    #region services
     protected List<ProductDto> Products { get; set; } = new();
     protected bool IsLoading { get; set; } = true;
+    #endregion
 
     protected override async Task OnInitializedAsync()
     {

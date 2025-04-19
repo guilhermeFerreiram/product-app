@@ -10,4 +10,10 @@ public interface IProductAppBackendRefitService
 
     [Get("/api/products/{productId}")]
     Task<ProductDto> GetProductByIdAsync(int productId);
+
+    [Post("/products")]
+    Task<ProductDto> CreateProduct([Body] ProductDto product);
+
+    [Put("/products/{id}")]
+    Task UpdateProduct(int id, [Body] ProductDto product);
 }

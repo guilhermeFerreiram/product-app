@@ -2,4 +2,54 @@
 @page "/products/edit/{Id:int}"
 @inherits EditProductBase
 
-<h3>Editar/Criar produto</h3>
+<MudPaper Class="pa-8" Elevation="3">
+    <MudText Typo="Typo.h5" Class="mb-4">@Title</MudText>
+
+    <EditForm Model="@Product" OnValidSubmit="@HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <MudGrid>
+            <MudItem xs="12" md="6" Class="px-2">
+                <MudTextField @bind-Value="@Product.Name"
+                              Label="Nome do Produto"
+                              Required="true"
+                              RequiredError="O nome é obrigatório"
+                              For="@(() => Product.Name)" />
+            </MudItem>
+
+            <MudItem xs="12" md="6" Class="px-2">
+                <MudNumericField @bind-Value="@Product.Price"
+                                 Label="Preço"
+                                 Required="true"
+                                 RequiredError="O preço é obrigatório"
+                                 For="@(() => Product.Price)"
+                                 Adornment="Adornment.End"
+                                 AdornmentText="R$" />
+            </MudItem>
+
+            <MudItem xs="12" Class="px-2">
+                <MudTextField @bind-Value="@Product.Description"
+                              Label="Descrição"
+                              Lines="3"
+                              Variant="Variant.Outlined"
+                              For="@(() => Product.Description)" />
+            </MudItem>
+
+            <MudItem xs="12" Class="d-flex justify-end mt-4 px-2">
+                <MudButton Variant="Variant.Text"
+                           Color="Color.Default"
+                           Class="mr-2"
+                           Href="/products">
+                    Cancelar
+                </MudButton>
+                <MudButton ButtonType="ButtonType.Submit"
+                           Variant="Variant.Filled"
+                           Color="Color.Primary"
+                           Disabled="@IsProcessing">
+                    @SubmitButtonText
+                </MudButton>
+            </MudItem>
+        </MudGrid>
+    </EditForm>
+</MudPaper>

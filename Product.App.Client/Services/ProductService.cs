@@ -28,4 +28,18 @@ public class ProductService(
 
         //usar refit
     }
+
+    public async Task<ProductDto> CreateProductAsync(ProductDto product)
+    {
+        return await Task.FromResult(product);
+
+        //usar refit
+    }
+
+    public async Task<ProductDto> UpdateProductAsync(ProductDto product)
+    {
+        return await Task.FromResult(product);
+
+        //usar refit
+    }
 }
